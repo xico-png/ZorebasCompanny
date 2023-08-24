@@ -12,13 +12,12 @@ namespace ZorebasCompanny
         private double preco;
         private int id;
         private int quantidadedeprodutos; 
-
-
-
+        
         public Produto(string nome, float preco, int id, int quantidadedeprodutos)
         {
             this.nome = nome;
             this.preco = preco;
+            
             this.id = id;
             this.quantidadedeprodutos = quantidadedeprodutos;
         }
@@ -53,6 +52,15 @@ namespace ZorebasCompanny
         public int GetQuantia()
         {
             return quantidadedeprodutos;
+        }
+        public void removeitem(int quantidade)
+        {
+            this.quantidadedeprodutos -= quantidade;
+        }
+        public void Vendeu()
+        {
+            this.id--;
+            this.quantidadedeprodutos--;
         }
     }
 }
